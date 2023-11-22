@@ -4,7 +4,7 @@
 	margin:0;
 	padding:0;
 }
-.body::before {
+.body-main::before {
 		content:""; /* required for ::before, it says the content is empty */
 		position:fixed; /* makes it so the background does not scroll with the page */
 		z-index:-100; /* place behind elements on page */
@@ -26,7 +26,7 @@
 }
 
 /* styling of everything except campus */
-.body{
+.body-main{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -67,7 +67,7 @@
     position: relative;
     display: inline-block;
     padding: 10px;
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -80,7 +80,7 @@ this makes it so that when you hover over one element it underlines*/
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     visibility: hidden;
     transform: scaleX(0);
     transform-origin: 0% 100%;
@@ -147,6 +147,23 @@ this makes it so that when you hover over one element it underlines*/
     text-align: left;
     margin-left: 2vw;
 }
+/*styling of pictures in accessibilitypage */
+.accessibilitypictures{
+    display: grid;
+}
+ 
+.access-pic{
+    max-width: 100%;
+}
+ 
+.codepictures{
+    display: grid;
+}
+ 
+.code-pic{
+    max-width: 100%;
+     
+}
 
 /*styling of main photo */
 .bilde1{
@@ -155,24 +172,21 @@ this makes it so that when you hover over one element it underlines*/
     margin-right: auto;      
     max-width: 60%;
     max-height: 60%;
-
-   
 }
 
-/*styling of second photo */
+/*styling of second and third photo */
+.topical-photos{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
 .bilde2{
-    display: block;
     max-width: 40%;
-    
+    float: right;
     padding-left: 2vw;
 }
 
-/* styling of third photo */
-.bilde3{
-    float: right;
-    max-width: 50%;
-    padding-left: 2vw;
-}
+
 
 
 /*home page styling*/
@@ -301,24 +315,19 @@ this makes it so that when you hover over one element it underlines*/
     text-align: center;
 }
 /*Stilen paa body*/
-.body{
+.body-campus{
     margin: auto;
 }
 
 /* Lenkeformatering, har tatt bort understreker paa alle lenker */
-a:link {
+.navBarText :link {
     font-family: "Gill Sans", sans-serif; 
     color: white;
     text-decoration: none;
 }
   
-/* Besøkte lenker har en annen farge */
-a:visited {
-    color: white;
-}
-  
 /* Musepeker over lenke med text shadow */
-a:hover {
+.navBarText :hover {
 
     color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px rgb(51, 0, 51);
@@ -595,6 +604,7 @@ footer{
 
     .access-pic{
         max-width: 100%;
+        
     }
 
     .text ul{
